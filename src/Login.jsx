@@ -7,7 +7,7 @@ const Login = () => {
     const [usernameOrEmail, setUsernameOrEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const apiUrl = 'https://node-mysql-api-9h33.onrender.com';
+
     const handleLogin = () => {
         // Validate fields before submitting
         if (!usernameOrEmail || !password) {
@@ -20,7 +20,7 @@ const Login = () => {
 
     const loginUser = (usernameOrEmail, password) => {
         // Make a POST request to the backend for login
-        fetch('https://node-mysql-api-9h33.onrender.com/login', {
+        fetch('http://localhost:3001/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

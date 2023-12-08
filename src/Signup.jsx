@@ -3,14 +3,14 @@ import './Signup.css';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-//accredian-frontend-task-m76i53w4d-nithinchepuris-projects.vercel.app
+
 const Signup = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
-    const apiUrl = 'https://node-mysql-api-9h33.onrender.com';
+
     const handleSignUp = async (e) => {
         e.preventDefault();
     
@@ -20,7 +20,7 @@ const Signup = () => {
             setError('Passwords do not match');
         } else {
             try {
-                const response = await fetch(`${apiUrl}/signup`, {
+                const response = await fetch('http://localhost:3001/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
